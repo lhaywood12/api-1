@@ -1,0 +1,34 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-avatars">
+    <h2 class="main-h2"><%=name %></h2>
+    <section class="section section-avatar">
+        <% data.forEach(item => { %>
+            <figure class="figure avatar-figure">
+                <a href ="/avatar/<%= item.id %>"></a>
+                <img src="<%= item.image %>" alt="<%item.title %>">
+                <%console.log(item) %>
+
+                <p><%= item.name %></p>
+                <p><%= item.bio %></p>
+                <p><%= item.nationality %></p>
+                <p><%= item.ethnicity %></p>
+                <p><%= item.ages %></p>
+                <p><%= item.born %></p>
+                <p><%= item.died %></p>
+                <p><%= item.physicalDescription %></p>
+                <p><%= item.personalInformation %></p>
+                <p><%= item.enemies %></p>
+                <p><%= item.weaponsOfChoice %></p>
+                <p><%= item.figthingStyles %></p>
+                <p><%= item.politicalInformation %></p>
+                <p><%= item.position %></p>
+                <p><%= item.predecessor %></p>
+                <p><%= item.chronologicalInformation %></p>
+                <p><%= item.voicedBy %></p>
+            </figure>
+        })
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
